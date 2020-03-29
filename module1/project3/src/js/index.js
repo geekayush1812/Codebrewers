@@ -90,11 +90,9 @@
 		let email = DOM.form.emailField.value;
 		let message = DOM.form.messageField.value;
 
-		let validated = {
-			Controller.validation.validateName(name),
-			Controller.validation.validateEmail(email),
-			Controller.validation.validateMessage(message),
-	}
+		let validatedName = Controller.validation.validateName(name);
+		let validatedEmail = Controller.validation.validateEmail(email);
+		let validatedMessage = Controller.validation.validateMessage(message);
 
 		if (validatedName.error) {
 			DOM.alertContainer.insertAdjacentElement(
