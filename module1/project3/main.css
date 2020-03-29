@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Lemonada&display=swap');
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+:root {
+	--background-primary: #ee0979;
+	--background-secondary: #ff416c;
+	--background-ternary: #ff4b2b;
+	--content-typo: #ff416c;
+	--primary-gradient: linear-gradient(
+		135deg,
+		rgba(238, 9, 121, 1) 0%,
+		rgba(255, 65, 108, 0.95) 54%,
+		rgba(255, 75, 43, 1) 100%
+	);
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.alert__container {
+	max-width: 25em;
+	padding: 0.8em 1.8em;
+	position: fixed;
+	bottom: 0.5em;
+	left: 0.5em;
+	z-index: 99999;
+}
+.alert {
+	max-width: 20em;
+	padding: 0.8em 1.8em;
+	font-size: 1em;
+	border-radius: 0.5em;
+	color: rgb(224, 224, 224);
+	margin-top: 0.5em;
+}
+
+.alert--failure {
+	background: linear-gradient(
+		-45deg,
+		rgb(226, 0, 0) 0%,
+		rgb(212, 32, 32) 100%
+	);
+}
+
+.alert--success {
+	background: linear-gradient(
+		-45deg,
+		rgb(53, 189, 41) 0%,
+		rgb(75, 214, 62) 100%
+	);
+	color: rgba(255, 255, 255, 0.9);
+}
+.contact__form__container {
+	height: 80%;
+	width: 75%;
+	box-shadow: -12px 12px 18px rgba(0, 0, 0, 0.16),
+		0px 12px 12px rgba(0, 0, 0, 0.16);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.contact__form__container .contact__form--hero {
+	background: var(--primary-gradient);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-left: 5em;
+	position: relative;
+}
+.contact__form--hero h1 {
+	font-size: 60px;
+	margin-top: -20%;
+	color: #fafafa;
+	letter-spacing: 10px;
+	font-family: 'Lemonada', cursive;
+}
+.contact__form--hero h3 {
+	color: rgba(242, 242, 242, 0.91);
+	font-size: 20px;
+	font-weight: 100;
+	margin-top: 17px;
+	word-spacing: 5px;
+	font-family: 'Lemonada', cursive;
+}
+.contact__form--hero .circle__arrow {
+	position: absolute;
+	height: 142px;
+	width: 142px;
+	border-radius: 142px;
+	background: #fff;
+	box-shadow: 1px 6px 6px rgba(0, 0, 0, 0.16);
+	right: 0;
+	top: 50%;
+	transform: translate(50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.circle__arrow .arrow {
+	height: 60px;
+	width: 75px;
+	background: var(--primary-gradient);
+	clip-path: polygon(
+		0% 30%,
+		60% 30%,
+		60% 0%,
+		100% 50%,
+		60% 100%,
+		60% 70%,
+		0% 70%
+	);
+}
+.contact__form__container .contact__form--content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact__form--content .social-contact {
+	margin-top: 4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.social-contact p {
+	font-size: 1.2em;
+	font-weight: 400;
+	font-style: italic;
+	color: #767676;
+	font-family: 'Lemonada', cursive;
+}
+.social-contact .social-icon {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.4em;
+}
+.social-contact .social-icon img {
+	height: 42px;
+	width: 42px;
+	margin: 0 0.5em;
+}
+
+.contact__form--content .form {
+	margin-top: 3em;
+}
+.form form .form-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+.form form .form-item label {
+	color: var(--content-typo);
+	font-weight: bold;
+	font-size: 13px;
+	margin-bottom: 0.375rem;
+}
+.form-item input[type='text'],
+.form-item input[type='email'] {
+	padding: 0.5em;
+	width: 260px;
+	outline: none;
+	border: 1px solid #dededf;
+	border-radius: 4px;
+	color: #767676;
+}
+.form-item textarea {
+	padding: 0.5em;
+	border: 1px solid #dededf;
+	outline: none;
+	resize: none;
+	color: #767676;
+}
+
+.form form .form-item--heart {
+	display: flex;
+	justify-content: center;
+}
+.form form .form-item--heart img {
+	height: 34px;
+	width: 34px;
+	margin: 0 0.1rem;
+}
+
+.form form .form-item--submit {
+	display: flex;
+	margin-top: 1rem;
+	justify-content: center;
+}
+.form-item--submit input {
+	border: none;
+	outline: none;
+	background: var(--primary-gradient);
+	padding: 0.8rem 3rem;
+	border-radius: 1.125rem;
+	font-size: 0.8rem;
+	color: #fafafa;
+	text-transform: uppercase;
+	font-family: 'Lemonada', cursive;
+	cursor: pointer;
+}
